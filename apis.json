@@ -1,0 +1,70 @@
+{
+    "name": "IDrive",
+    "description": "<p>Built with developers in mind, IDrive Encrypted Versioned file System is a powerful, easy to use service that provides secure, encrypted and versioned cloud storage. Unlike other generic storage systems, IDrive EVS has storage encryption, versioning and block level incremental transfers built in both-ways for uploads and downloads. This gives you the freedom to develop innovative applications to customize your Backup, Storage, Sync, Sharing, Disaster recovery and more that are highly efficient, scalable and require minimal coding. It provides powerful APIs for uploading, retrieving, managing data and storage, at any time, from anywhere on the Internet.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1055-idrive-online-backup.jpg",
+    "tags": [
+        "api provider",
+        "have api",
+        "security",
+        "storage"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/idrive\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "IDrive",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1055-idrive-online-backup.jpg",
+            "humanURL": "https:\/\/www.idrive.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/idrive-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "https:\/\/evs.idrive.com\/evs\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "http:\/\/www.crunchbase.com\/company\/idrive"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/idrive-inc"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/www.idrive.com\/enterprise\/centralized_console\/"
+        },
+        {
+            "type": "Email",
+            "url": "copyright@idrive.com"
+        },
+        {
+            "type": "Email",
+            "url": "privacy@idrive.com"
+        },
+        {
+            "type": "Email",
+            "url": "support@idrive.com"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/IDriveBackup"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.idrive.com\/"
+        }
+    ]
+}
