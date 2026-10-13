@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idrive/main/json-schema/idrive-post-api-reseller-v1-edit-user-response-schema.json",
+  "title": "PostApiResellerV1EditUserResponse",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1EditUserResponse",
+  "type": "object",
+  "properties": {
+    "user_disabled": {
+      "type": "boolean"
+    }
+  }
+}

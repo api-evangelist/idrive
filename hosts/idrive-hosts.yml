@@ -1,0 +1,108 @@
+generated: '2026-10-13'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 3
+  other_domain: 4
+  platform: 0
+  roles:
+  - api
+  - identity
+  - marketing
+  - website
+hosts:
+- host: api.console.idrivee2.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  status: 200
+  registrable_domain: idrivee2.com
+  role: api
+  relation: other-domain
+- host: api.idrive.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: idrive.com
+  role: api
+  relation: own
+- host: api.idrivee2.com
+  found_by:
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: idrivee2.com
+  role: api
+  relation: other-domain
+- host: apis.console.idrivee2.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  status: 200
+  registrable_domain: idrivee2.com
+  role: api
+  relation: other-domain
+- host: blog.idrive.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: idrive.com
+  role: marketing
+  relation: own
+- host: console.idrivee2.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - SignUp
+  - Login
+  serves: []
+  registrable_domain: idrivee2.com
+  role: identity
+  relation: other-domain
+- host: www.idrive.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - DeveloperPortal
+  - Documentation
+  - APIReference
+  - Support
+  - FAQ
+  - Pricing
+  - TermsOfService
+  - Integrations
+  serves:
+  - docs
+  registrable_domain: idrive.com
+  role: website
+  relation: own

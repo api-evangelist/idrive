@@ -1,0 +1,884 @@
+openapi: 3.1.0
+info:
+  title: IDrive e2 Reseller API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 38 operation(s) read from 4 public documentation
+    page(s) (each operation names its page in x-source). This is not the provider''s published contract; IDrive has published
+    no machine-readable contract that the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 38
+    documentation: 0
+    pages-with-code: 4
+    pages-read: 4
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://www.idrive.com/s3-storage-e2/reseller-api
+  - https://www.idrive.com/de/s3-storage-e2/reseller-api
+  - https://www.idrive.com/ko/s3-storage-e2/reseller-api
+  - https://www.idrive.com/s3-storage-e2/s3-compatible-api
+  x-ae-note: 5 operations taken from S3-compatible-API examples (bucket/object sample paths, not api.idrivee2.com) were removed
+    by API Evangelist on 2026-10-13; S3 operations are the AWS S3 API surface at regional e2 endpoints.
+servers:
+- url: https://api.idrivee2.com
+paths:
+  /api/reseller/v1/create_access_key:
+    post:
+      operationId: post_api_reseller_v1_create_access_key
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/create_access_key
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1CreateAccessKeyResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/create_access_key' \n --data '{ \n    \"email\"\
+          :\"e2reseller+1 @idrivee2.com \", \n    \"storage_dn\":\"abcd.test@idrivee2.com\", \n    \"name\":\"myaccesskeyname\"\
+          , \n    \"permissions\":0 \n }' --header 'token: <your api key>' \n List Access Keys \n POST \n https://api.idrivee2.com/api/reseller/v1/list_access_keys\
+          \ Click to copy Link copied \n This API lists "
+  /api/reseller/v1/create_user:
+    put:
+      operationId: put_api_reseller_v1_create_user
+      tags:
+      - Api
+      summary: PUT /api/reseller/v1/create_user
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApiResellerV1CreateUserResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request PUT 'https://api.idrivee2.com/api/reseller/v1/create_user' \n --data '{ \n     \"email\"\
+          : \"e2reseller+1@idrivee2.com\", \n     \"password\":\"dGVzdDEyMw==\", \n     \"first_name\":\"dev\", \n     \"\
+          quota\": 1024 \n }' --header 'token: <your api key>' \n Edit User \n POST \n https://api.idrivee2.com/api/reseller/v1/edit_user\
+          \ Click to copy Link copied \n This API allows you to update an existing user accoun"
+  /api/reseller/v1/disable_user:
+    post:
+      operationId: post_api_reseller_v1_disable_user
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/disable_user
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1DisableUserResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/disable_user' \n --data '{ \n     \"email\"\
+          :\"e2reseller+1@idrivee2.com\" \n }' \n Enable User \n POST \n https://api.idrivee2.com/api/reseller/v1/enable_user\
+          \ Click to copy Link copied \n This API reenables disabled user accounts. Users can login, access data, and perform\
+          \ normal operations. \n Input \n string email; \n Length Parameters \n Email [255]"
+  /api/reseller/v1/edit_user:
+    post:
+      operationId: post_api_reseller_v1_edit_user
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/edit_user
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1EditUserResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST \n 'https://api.idrivee2.com/api/reseller/v1/edit_user'  --header 'Content-Type: application/json'\
+          \  --header 'token: <your_api_key>'  --data '{ \n    \"email\":\"shane@idrive.com \", \n    \"quota\":\"12\", \n\
+          \    \"email_notification\": true \n }' \n Note: \n email_notification can be modified only for signup users and\
+          \ non-managed users \n Updating email_notification for managed or non-signup us"
+  /api/reseller/v1/enable_user:
+    post:
+      operationId: post_api_reseller_v1_enable_user
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/enable_user
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1EnableUserResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/enable_user' \n --data '{ \n     \"email\"\
+          :\"e2reseller+1@idrivee2.com\" \n }' --header 'token: <your api key>' \n Remove User \n POST \n https://api.idrivee2.com/api/reseller/v1/remove_user\
+          \ Click to copy Link copied \n This API will permanently delete users from IDrive ® e2. \n Note: The user data will\
+          \ be lost permanently on performing this operat"
+  /api/reseller/v1/enable_user_region:
+    post:
+      operationId: post_api_reseller_v1_enable_user_region
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/enable_user_region
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1EnableUserRegionResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/enable_user_region' \n --data '{ \n   \"email\"\
+          :\"e2reseller+1 @idrivee2.com \", \n   \"region\": \"NY\" \n }' --header 'token: <your api key>' \n List User Enabled\
+          \ Regions \n POST \n https://api.idrivee2.com/api/reseller/v1/list_user_regions Click to copy Link copied \n This\
+          \ API lists all enabled regions of the user. \n Input \n { \n string email; \n } \n "
+  /api/reseller/v1/invite:
+    put:
+      operationId: put_api_reseller_v1_invite
+      tags:
+      - Api
+      summary: PUT /api/reseller/v1/invite
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApiResellerV1InviteResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request PUT 'https://api.idrivee2.com/api/reseller/v1/invite' \n --data '{ \n     \"email\": \"e2reseller+1@idrivee2.com\"\
+          , \n     \"quota\": 1024 \n }' --header 'token: <your api key>' \n Create User \n PUT \n https://api.idrivee2.com/api/reseller/v1/create_user\
+          \ Click to copy Link copied \n This API will create a user account on IDrive ® e2 which will be linked to your account.\
+          \ \n Input \n string email; \n"
+  /api/reseller/v1/invite/cancel:
+    post:
+      operationId: post_api_reseller_v1_invite_cancel
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/invite/cancel
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/invite/cancel' \n --data '{ \n     \"email\"\
+          :\"e2reseller+1 @idrivee2.com \" \n }' --header 'token: <your api key>' \n Password Reset \n Get subuser password\
+          \ reset link \n POST \n https://api.idrivee2.com/api/reseller/v1/subuser/reset_password_link Click to copy Link\
+          \ copied \n This API generates a password reset link for a reseller subuser. The lin"
+  /api/reseller/v1/list_access_keys:
+    post:
+      operationId: post_api_reseller_v1_list_access_keys
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/list_access_keys
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1ListAccessKeysResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/list_access_keys' \n --data '{ \n     \"email\"\
+          :\"e2reseller+1 @idrivee2.com \", \n     \"storage_dn\":\"abcd.test.idrivee2.com\", \n }' --header 'token:<your\
+          \ api key>' \n Remove Access Key \n POST \n https://api.idrivee2.com/api/reseller/v1/remove_access_key Click to\
+          \ copy Link copied \n This API removes the Access Key for the storage. \n Input \n { \n   "
+  /api/reseller/v1/list_user_regions:
+    post:
+      operationId: post_api_reseller_v1_list_user_regions
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/list_user_regions
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiResellerV1ListUserRegionsRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1ListUserRegionsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/list_user_regions' \n --data '{ \n \"email\"\
+          :\" e2reseller+1@idrivee2.com \" \n }' --header 'token: <your api key>' \n Remove Region assigned to User \n POST\
+          \ \n https://api.idrivee2.com/api/reseller/v1/remove_user_region Click to copy Link copied \n This API removes a\
+          \ region assigned to the user. \n Input \n { \n     string email; \n     string storag"
+  /api/reseller/v1/regions:
+    get:
+      operationId: get_api_reseller_v1_regions
+      tags:
+      - Api
+      summary: GET /api/reseller/v1/regions
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiResellerV1RegionsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request GET 'https://api.idrivee2.com/api/reseller/v1/regions' --header 'token: <your api key>' \n\
+          \ Enable Region for User \n POST \n https://api.idrivee2.com/api/reseller/v1/enable_user_region Click to copy Link\
+          \ copied \n This API enables the regions for the user. \n Input \n { \n      string email; \n      string region;\
+          \ \n } \n region : region_key from list regions api. e.g \"TX\", \"LDN\" etc. \n API r"
+  /api/reseller/v1/remove_access_key:
+    post:
+      operationId: post_api_reseller_v1_remove_access_key
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/remove_access_key
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1RemoveAccessKeyResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location --request POST 'https://api.idrivee2.com/api/reseller/v1/remove_access_key' \n --data '{\
+          \ \n     \"email\":\"e2reseller+1 @idrivee2.com \", \n     \"storage_dn\":\"abcd.test@idrivee2.com\", \n     \"\
+          access_key\":\"<your access key>\" \n }' --header 'token: <your api key>' \n Get Bucket Stats \n GET/POST \n 'https://api.idrivee2.com/api/reseller/v1/storage/bucket_stats'\
+          \ Click to copy Link copied \n Retur"
+  /api/reseller/v1/remove_user:
+    post:
+      operationId: post_api_reseller_v1_remove_user
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/remove_user
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1RemoveUserResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/remove_user' \n --data '{ \n     \"email\"\
+          :\"e2reseller+1 @idrivee2.com \" \n }' --header 'token: <your api key>' \n Cancel Invite \n POST \n https://api.idrivee2.com/api/reseller/v1/invite/cancel\
+          \ Click to copy Link copied \n This API will Cancel the invited user account on IDrive ® e2 which will be linked\
+          \ to your account. \n Input \n string email; "
+  /api/reseller/v1/remove_user_region:
+    post:
+      operationId: post_api_reseller_v1_remove_user_region
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/remove_user_region
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1RemoveUserRegionResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/remove_user_region' \n --data '{ \n    \"\
+          email\":\"e2reseller+1 @idrivee2.com \", \n    \"storage_dn\": \"abcd.test@idrivee2.com\" \n }' --header 'token:\
+          \ <your api key>' \n Update cors settings for user region \n Method: POST \n URL:  https://api.idrivee2.com/api/reseller/v1/storage/set_cors\
+          \ Click to copy Link copied \n This API will update cors settin"
+  /api/reseller/v1/storage/bucket_stats:
+    post:
+      operationId: post_api_reseller_v1_storage_bucket_stats
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/storage/bucket_stats
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1StorageBucketStatsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST \n 'https://api.idrivee2.com/api/reseller/v1/storage/bucket_stats'  --header 'token:\
+          \ <your api key>'  --header 'Content-Type: application/json' \n --data '{ \n    \"email\":\"user@example.com\",\
+          \ \n    \"storage_dn\":\"e2 region endpoint\", \n    \"bucket_name\": \"my-bucket \n }' \n Example Response (200\
+          \ OK) \n { \n \"bucket_name\": \"my-bucket\", \n \"file_count\": 15, \n \"bucket_size\": 3011574 \n } \n Err"
+  /api/reseller/v1/storage/cname:
+    post:
+      operationId: post_api_reseller_v1_storage_cname
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/storage/cname
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1StorageCnameResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/storage/cname' \n --data'{ \n     \"email\"\
+          : \"e2reseller+1@idrivee2.com\" , \n     \"storage_dn\": \"abcd.test.idrivee2.com\" , \n     \"cname\" : \"example.mycloud.io\"\
+          \ , \n     \"public_key\" : \"...\" , \n     \"private_key\" : \"...\" , \n     \"file_index\" : \"1\" \n }'--header\
+          \ 'token:<your api key>' \n List CNAMEs \n POST \n https://api.idrivee2.com/api/reseller/"
+  /api/reseller/v1/storage/cname/add:
+    post:
+      operationId: post_api_reseller_v1_storage_cname_add
+      tags:
+      - Api
+      summary: Adds CNAME for the specified storage dns.
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      parameters:
+      - name: email
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: storage_dn
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: cname
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiResellerV1StorageCnameAddRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1StorageCnameAddResponse'
+      x-evidence:
+        kind: documentation
+  /api/reseller/v1/storage/cname/remove:
+    post:
+      operationId: post_api_reseller_v1_storage_cname_remove
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/storage/cname/remove
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/storage/cname/remove \n --data'{ \n     \"\
+          email\": \"e2reseller+1@idrivee2.com\" , \n     \"storage_dn\": \"abcd.test.idrivee2.com\" , \n     \"cname\" :\
+          \ \"example.mycloud.io\" \n }'--header 'token:<your api key>' \n Subuser Operations \n The IDrive ® e2 Subuser API\
+          \ is supported for reseller accounts. A reseller administrator may invoke these APIs on beha"
+  /api/reseller/v1/storage/cname/update:
+    post:
+      operationId: post_api_reseller_v1_storage_cname_update
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/storage/cname/update
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiResellerV1StorageCnameUpdateResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/storage/cname/update \n --data'{ \n     \"\
+          email\": \"e2reseller+1@idrivee2.com\" , \n     \"storage_dn\": \"abcd.test.idrivee2.com\" , \n     \"cname\" :\
+          \ \"example.mycloud.io\" , \n     \"public_key\" : \"...\" , \n     \"private_key\" : \"...\" , \n     \"file_index\"\
+          \ : \"1\" \n }'--header 'token:<your api key>' \n Remove CNAMEs \n POST \n https://api.idrivee2.com/api/r"
+  /api/reseller/v1/storage/set_cors:
+    post:
+      operationId: post_api_reseller_v1_storage_set_cors
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/storage/set_cors
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location --request POST \n https://api.idrivee2.com/api/reseller/v1/storage/set_cors --header 'token:\
+          \ <your token>'  --header 'Content-Type: application/json'  --data-raw '{ \n    \"email\":\"test@test.com \", \n\
+          \    \"storage_dn\":\"cxan.tx21.edgedrive.com\", \n    \"cors\":\"test1.com,test2.com,test3.com\", \n }' \n Add\
+          \ Access Key \n POST \n https://api.idrivee2.com/api/reseller/v1/create_access_key Click to "
+  /api/reseller/v1/subuser/reset_password_link:
+    post:
+      operationId: post_api_reseller_v1_subuser_reset_password_link
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/subuser/reset_password_link
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/subuser/reset_password_link' \n --data '{\
+          \ \n     \"email\":\"subuser@example.com\" \n }' --header 'token: <your api key>' \n Get Storage Usage \n POST \n\
+          \ https://api.idrivee2.com/api/reseller/v1/usage_stats Click to copy Link copied \n This API returns the array of\
+          \ IDrive ® e2 utilization for the user provided. \n Input \n { \n     string email; \n   "
+  /api/reseller/v1/usage_stats:
+    post:
+      operationId: post_api_reseller_v1_usage_stats
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/usage_stats
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/usage_stats' \n --data '{ \n     \"email\"\
+          : \"DEV-TEST+1@idrivee2.com\", \n     \"date_to\":\"2022-08-31\", \n     \"date_from\":\"2022-08-01\" \n }' --header\
+          \ 'token: <your api key>' \n Get Activity Logs \n POST \n https://api.idrivee2.com/api/reseller/v1/user_activity_history\
+          \ Click to copy Link copied \n This API will fetch the activity logs of a user for "
+  /api/reseller/v1/user_activity_history:
+    post:
+      operationId: post_api_reseller_v1_user_activity_history
+      tags:
+      - Api
+      summary: POST /api/reseller/v1/user_activity_history
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/reseller/v1/user_activity_history' \n --data '{ \n     \
+          \ \"email\" : \"abc1@example.com\", \n      \"start_date\" : \"2025-04-05\", \n      \"end_date\" : \"2025-05-28\"\
+          , \n      \"page_no\" : 1 \n }' --header 'token: <your api key>' \n Storage Operations \n List Regions \n GET \n\
+          \ https://api.idrivee2.com/api/reseller/v1/regions Click to copy Link copied \n This API returns"
+  /api/reseller/v1/users:
+    get:
+      operationId: get_api_reseller_v1_users
+      tags:
+      - Api
+      summary: GET /api/reseller/v1/users
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiResellerV1UsersResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request GET 'https://api.idrivee2.com/api/reseller/v1/users' --header 'token: <your api key>' \n\
+          \ Get user by email: "
+  /api/subusers/v1/create_account:
+    put:
+      operationId: put_api_subusers_v1_create_account
+      tags:
+      - Api
+      summary: PUT /api/subusers/v1/create_account
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApiSubusersV1CreateAccountResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request PUT 'https://api.idrivee2.com/api/subusers/v1/create_account' \n --data '{ \n      \"subuser_email\"\
+          \ : \"abc1@example.com\", \n      \"storage_access\" : [ \n       { \n          \"storage_dn\" : \"h4l1.ch.idrivee2-29.com\"\
+          , \n          \"buckets\" : [ \n          \"bucket1\", \n          \"bucket2\" \n         ] \n       }, \n       {\
+          \ \n          \"storage_dn\" : \"r8l2.ie.idrivee2-44.com\", \n          \"buckets\" "
+  /api/subusers/v1/disable:
+    post:
+      operationId: post_api_subusers_v1_disable
+      tags:
+      - Api
+      summary: POST /api/subusers/v1/disable
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1DisableResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/disable' \n --data '{ \n    \"subuser_email\"\
+          \ : \"abc1@example.com\", \n    \"admin_email\" : \"admin1@example.com\", \n    \"email_notification\" : true \n\
+          \ }' --header 'token: <your api key>' \n Enable subuser \n POST \n https://api.idrivee2.com/api/subusers/v1/enable\
+          \ Click to copy Link copied \n This API re-enables disabled subuser accounts. Subusers ca"
+  /api/subusers/v1/enable:
+    post:
+      operationId: post_api_subusers_v1_enable
+      tags:
+      - Api
+      summary: POST /api/subusers/v1/enable
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1EnableResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/enable' \n --data '{ \n      \"subuser_email\"\
+          \ : \"abc1@example.com\", \n      \"admin_email\" : \"admin1@example.com\", \n      \"email_notification\" : true\
+          \ \n }' --header 'token: <your api key>' \n Remove subuser \n POST \n https://api.idrivee2.com/api/subusers/v1/remove\
+          \ Click to copy Link copied \n This API will permanently delete users from IDrive ® "
+  /api/subusers/v1/invite:
+    put:
+      operationId: put_api_subusers_v1_invite
+      tags:
+      - Api
+      summary: PUT /api/subusers/v1/invite
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApiSubusersV1InviteResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request PUT 'https://api.idrivee2.com/api/subusers/v1/invite' \n --data '{ \n   \"subuser_email\"\
+          : \"abc1@example.com\", \n   \"storage_access\": [ \n     { \n       \"storage_dn\": \"h4l1.ch.idrivee2-29.com\"\
+          , \n       \"buckets\": [ \n         \"bucket1\", \n         \"bucket2\" \n       ] \n     }, \n     { \n       \"\
+          storage_dn\": \"r8l2.ie.idrivee2-44.com\", \n       \"buckets\": [ \n         \"bucket3\", \n         \"bucket"
+  /api/subusers/v1/invite/cancel:
+    post:
+      operationId: post_api_subusers_v1_invite_cancel
+      tags:
+      - Api
+      summary: POST /api/subusers/v1/invite/cancel
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1InviteCancelResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/invite/cancel' \n --data '{ \n     \"subuser_email\"\
+          : \"abc1@example.com\", \n     \"admin_email\": \"admin1@example.com\" \n }' --header 'token: <your api key>' \n\
+          \ Update Subuser \n POST \n https://api.idrivee2.com/api/subusers/v1/update Click to copy Link copied \n This API\
+          \ updates subusers access, permissions, SSO, and session control. The API can b"
+  /api/subusers/v1/list:
+    post:
+      operationId: post_api_subusers_v1_list
+      tags:
+      - Api
+      summary: POST /api/subusers/v1/list
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1ListResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/list' --header 'token: <your api key>' \n\
+          \ --> "
+  /api/subusers/v1/remove:
+    post:
+      operationId: post_api_subusers_v1_remove
+      tags:
+      - Api
+      summary: POST /api/subusers/v1/remove
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1RemoveResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/remove' \n --data '{ \n     \"subuser_email\"\
+          : \"abc1@example.com\", \n     \"admin_email\": \"admin1@example.com\", \n     \"email_notification\": true \n }'\
+          \ --header 'token: <your api key>' \n Cancel Invite \n POST \n https://api.idrivee2.com/api/subusers/v1/invite/cancel\
+          \ Click to copy Link copied \n This API will cancel the invitation sent to the subus"
+  /api/subusers/v1/update:
+    post:
+      operationId: post_api_subusers_v1_update
+      tags:
+      - Api
+      summary: POST /api/subusers/v1/update
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/update' \n --data '{ \n     \"subuser_email\"\
+          : \"abc1@example.com\", \n     \"storage_access\": [ \n         { \n             \"storage_dn\": \"h4l1.ch.idrivee2-29.com\"\
+          , \n             \"buckets\": [ \n               \"bucket1\", \n               \"bucket2\" \n              ] \n\
+          \         }, \n         { \n             \"storage_dn\": \"r8l2.ie.idrivee2-44.com\", \n    "
+  /api/subusers/v1/user_activity_history:
+    post:
+      operationId: post_api_subusers_v1_user_activity_history
+      tags:
+      - Api
+      summary: POST /api/subusers/v1/user_activity_history
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/user_activity_history' \n --data '{ \n     \"\
+          subuser_email\": \"abc1@example.com\", \n     \"admin_email\" : \"admin1@example.com\", \n     \"start_date\" :\
+          \ \"2025-04-05\", \n     \"end_date\" : \"2025-05-28\", \n     \"page_no\" : 1 \n }' --header 'token: <your api\
+          \ key>' \n E2-logo \n IDrive ® \n Pricing \n Support \n Contact Sales \n Blog \n Get Started \n Sign up \n "
+components:
+  schemas:
+    PostApiResellerV1CreateAccessKeyResponse:
+      type: object
+      properties:
+        removed:
+          type: boolean
+    PutApiResellerV1CreateUserResponse:
+      type: object
+      properties:
+        user_updated:
+          type: boolean
+    PostApiResellerV1DisableUserResponse:
+      type: object
+      properties:
+        user_enabled:
+          type: boolean
+    PostApiResellerV1EditUserResponse:
+      type: object
+      properties:
+        user_disabled:
+          type: boolean
+    PostApiResellerV1EnableUserResponse:
+      type: object
+      properties:
+        user_removed:
+          type: boolean
+    PostApiResellerV1EnableUserRegionResponse:
+      type: object
+      properties:
+        removed:
+          type: boolean
+    PutApiResellerV1InviteResponse:
+      type: object
+      properties:
+        user_created:
+          type: boolean
+    PostApiResellerV1ListAccessKeysResponse:
+      type: object
+      properties:
+        removed:
+          type: boolean
+    PostApiResellerV1ListUserRegionsRequest:
+      type: object
+      properties:
+        email:
+          type: string
+    PostApiResellerV1ListUserRegionsResponse:
+      type: object
+      properties:
+        removed:
+          type: boolean
+    GetApiResellerV1RegionsResponse:
+      type: object
+      properties:
+        removed:
+          type: boolean
+    PostApiResellerV1RemoveAccessKeyResponse:
+      type: object
+      properties:
+        bucket_name:
+          type: string
+        file_count:
+          type: integer
+        bucket_size:
+          type: integer
+    PostApiResellerV1RemoveUserResponse:
+      type: object
+      properties:
+        user_removed:
+          type: boolean
+    PostApiResellerV1RemoveUserRegionResponse:
+      type: object
+      properties:
+        cors_updated:
+          type: boolean
+    PostApiResellerV1StorageBucketStatsResponse:
+      type: object
+      properties:
+        bucket_name:
+          type: string
+        file_count:
+          type: integer
+        bucket_size:
+          type: integer
+    PostApiResellerV1StorageCnameResponse:
+      type: object
+      properties:
+        cname_updated:
+          type: boolean
+    PostApiResellerV1StorageCnameAddRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        storage_dn:
+          type: string
+          description: storage domain assigned to the user
+        cname:
+          type: string
+          description: new CNAME to be assigned
+        public_key:
+          type: string
+        private_key:
+          type: string
+        file_index:
+          type: string
+        passphrase:
+          type: string
+          description: optional, for encrypted private key
+      required:
+      - email
+      - storage_dn
+      - cname
+      - public_key
+      - private_key
+    PostApiResellerV1StorageCnameAddResponse:
+      type: object
+      properties:
+        cname_added:
+          type: boolean
+    PostApiResellerV1StorageCnameUpdateResponse:
+      type: object
+      properties:
+        cname_removed:
+          type: boolean
+    GetApiResellerV1UsersResponse:
+      type: object
+      properties:
+        user_created:
+          type: boolean
+    PutApiSubusersV1CreateAccountResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiSubusersV1DisableResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiSubusersV1EnableResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PutApiSubusersV1InviteResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiSubusersV1InviteCancelResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiSubusersV1ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiSubusersV1RemoveResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: token
+security:
+- apiKey: []
+tags:
+- name: Api
+- name: Cas Test 27Aug2026

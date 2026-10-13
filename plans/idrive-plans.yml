@@ -1,0 +1,83 @@
+generated: '2026-10-13'
+method: searched
+source: https://www.idrive.com/s3-storage-e2/pricing
+name: IDrive e2 plans
+description: Yearly IDrive e2 storage plans as listed on the pricing page (selected tiers; the page lists 1 TB to 1000 TB,
+  plus monthly and Veeam/MSP/Reseller plans via Contact Sales). First-year 50% promotional prices are shown on the page as
+  limited time.
+plans:
+- name: 1 TB yearly
+  price: 59.5
+  price_text: $59.50 /year
+  features:
+  - 1 TB storage space
+  limits:
+  - 1 TB storage
+- name: 2 TB yearly
+  price: 119.0
+  price_text: $119.00 /year
+  features:
+  - 2 TB storage space
+  limits:
+  - 2 TB storage
+- name: 5 TB yearly
+  price: 297.5
+  price_text: $297.50 /year
+  features:
+  - 5 TB storage space
+  limits:
+  - 5 TB storage
+- name: 10 TB yearly
+  price: 595.0
+  price_text: $595.00 /year
+  features:
+  - 10 TB storage space
+  limits:
+  - 10 TB storage
+- name: 20 TB yearly
+  price: 1190.0
+  price_text: $1190.00 /year
+  features:
+  - 20 TB storage space
+  limits:
+  - 20 TB storage
+- name: 50 TB yearly
+  price: 2975.0
+  price_text: $2975.00 /year
+  features:
+  - 50 TB storage space
+  limits:
+  - 50 TB storage
+- name: 100 TB yearly
+  price: 5950.0
+  price_text: $5950.00 /year
+  features:
+  - 100 TB storage space
+  limits:
+  - 100 TB storage
+- name: 200 TB yearly
+  price: 11900.0
+  price_text: $11900.00 /year
+  features:
+  - 200 TB storage space
+  limits:
+  - 200 TB storage
+- name: 500 TB yearly
+  price: 29750.0
+  price_text: $29750.00 /year
+  features:
+  - 500 TB storage space
+  limits:
+  - 500 TB storage
+- name: 1000 TB yearly
+  price: 59500.0
+  price_text: $59500.00 /year
+  features:
+  - 1000 TB storage space
+  limits:
+  - 1000 TB storage
+- name: Veeam/MSP/Reseller plans
+  price: Contact sales
+  features:
+  - Reseller API access
+  limits: []

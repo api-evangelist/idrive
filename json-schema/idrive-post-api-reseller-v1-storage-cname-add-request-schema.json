@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idrive/main/json-schema/idrive-post-api-reseller-v1-storage-cname-add-request-schema.json",
+  "title": "PostApiResellerV1StorageCnameAddRequest",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1StorageCnameAddRequest",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "storage_dn": {
+      "type": "string",
+      "description": "storage domain assigned to the user"
+    },
+    "cname": {
+      "type": "string",
+      "description": "new CNAME to be assigned"
+    },
+    "public_key": {
+      "type": "string"
+    },
+    "private_key": {
+      "type": "string"
+    },
+    "file_index": {
+      "type": "string"
+    },
+    "passphrase": {
+      "type": "string",
+      "description": "optional, for encrypted private key"
+    }
+  },
+  "required": [
+    "email",
+    "storage_dn",
+    "cname",
+    "public_key",
+    "private_key"
+  ]
+}

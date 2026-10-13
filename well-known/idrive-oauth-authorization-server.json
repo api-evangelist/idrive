@@ -1,0 +1,30 @@
+{
+  "issuer": "https://www.idrive.com",
+  "authorization_endpoint": "https://www.idrive.com/idrive/o/oauth/v1/authorize",
+  "token_endpoint": "https://www.idrive.com/idrive/o/oauth/v1/token",
+  "revocation_endpoint": "https://www.idrive.com/idrive/o/oauth/v1/revoke",
+  "scopes_supported": [
+    "idrive_spaces_login",
+    "drive.read",
+    "drive.write",
+    "backup.read",
+    "backup.write",
+    "share.read",
+    "share.write"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "grant_types_supported": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "code_challenge_methods_supported": [
+    "S256"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "none"
+  ],
+  "registration_endpoint": "https://www.idrive.com/idrive/o/oauth/v1/register"
+}

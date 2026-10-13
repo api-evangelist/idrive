@@ -1,0 +1,15 @@
+generated: '2026-10-13'
+method: searched
+probe: true
+source: https://security.idrive.com/
+url: https://security.idrive.com/
+certifications:
+- SOC 2
+- HIPAA
+- GDPR
+evidence:
+- source: https://security.idrive.com/
+  keywords:
+  - soc 2
+  - hipaa
+  - gdpr

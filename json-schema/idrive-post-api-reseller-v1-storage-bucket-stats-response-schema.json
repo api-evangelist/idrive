@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idrive/main/json-schema/idrive-post-api-reseller-v1-storage-bucket-stats-response-schema.json",
+  "title": "PostApiResellerV1StorageBucketStatsResponse",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1StorageBucketStatsResponse",
+  "type": "object",
+  "properties": {
+    "bucket_name": {
+      "type": "string"
+    },
+    "file_count": {
+      "type": "integer"
+    },
+    "bucket_size": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "@context": {
+    "@vocab": "https://idrive.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "idrive": "https://idrive.com/schema#",
+    "PostApiResellerV1CreateAccessKeyResponse": "idrive:PostApiResellerV1CreateAccessKeyResponse",
+    "removed": {
+      "@id": "idrive:removed",
+      "@type": "xsd:boolean"
+    },
+    "PutApiResellerV1CreateUserResponse": "idrive:PutApiResellerV1CreateUserResponse",
+    "user_updated": {
+      "@id": "idrive:user_updated",
+      "@type": "xsd:boolean"
+    },
+    "PostApiResellerV1DisableUserResponse": "idrive:PostApiResellerV1DisableUserResponse",
+    "user_enabled": {
+      "@id": "idrive:user_enabled",
+      "@type": "xsd:boolean"
+    },
+    "PostApiResellerV1EditUserResponse": "idrive:PostApiResellerV1EditUserResponse",
+    "user_disabled": {
+      "@id": "idrive:user_disabled",
+      "@type": "xsd:boolean"
+    },
+    "PostApiResellerV1EnableUserResponse": "idrive:PostApiResellerV1EnableUserResponse",
+    "user_removed": {
+      "@id": "idrive:user_removed",
+      "@type": "xsd:boolean"
+    },
+    "PostApiResellerV1EnableUserRegionResponse": "idrive:PostApiResellerV1EnableUserRegionResponse",
+    "PutApiResellerV1InviteResponse": "idrive:PutApiResellerV1InviteResponse",
+    "user_created": {
+      "@id": "idrive:user_created",
+      "@type": "xsd:boolean"
+    },
+    "PostApiResellerV1ListAccessKeysResponse": "idrive:PostApiResellerV1ListAccessKeysResponse",
+    "PostApiResellerV1ListUserRegionsRequest": "idrive:PostApiResellerV1ListUserRegionsRequest",
+    "email": {
+      "@id": "idrive:email",
+      "@type": "xsd:string"
+    },
+    "PostApiResellerV1ListUserRegionsResponse": "idrive:PostApiResellerV1ListUserRegionsResponse",
+    "GetApiResellerV1RegionsResponse": "idrive:GetApiResellerV1RegionsResponse",
+    "PostApiResellerV1RemoveAccessKeyResponse": "idrive:PostApiResellerV1RemoveAccessKeyResponse",
+    "bucket_name": {
+      "@id": "idrive:bucket_name",
+      "@type": "xsd:string"
+    },
+    "file_count": {
+      "@id": "idrive:file_count",
+      "@type": "xsd:integer"
+    },
+    "bucket_size": {
+      "@id": "idrive:bucket_size",
+      "@type": "xsd:integer"
+    },
+    "PostApiResellerV1RemoveUserResponse": "idrive:PostApiResellerV1RemoveUserResponse",
+    "PostApiResellerV1RemoveUserRegionResponse": "idrive:PostApiResellerV1RemoveUserRegionResponse",
+    "cors_updated": {
+      "@id": "idrive:cors_updated",
+      "@type": "xsd:boolean"
+    },
+    "PostApiResellerV1StorageBucketStatsResponse": "idrive:PostApiResellerV1StorageBucketStatsResponse",
+    "PostApiResellerV1StorageCnameResponse": "idrive:PostApiResellerV1StorageCnameResponse",
+    "cname_updated": {
+      "@id": "idrive:cname_updated",
+      "@type": "xsd:boolean"
+    },
+    "PostApiResellerV1StorageCnameAddRequest": "idrive:PostApiResellerV1StorageCnameAddRequest",
+    "storage_dn": {
+      "@id": "idrive:storage_dn",
+      "@type": "xsd:string"
+    },
+    "cname": {
+      "@id": "idrive:cname",
+      "@type": "xsd:string"
+    },
+    "public_key": {
+      "@id": "idrive:public_key",
+      "@type": "xsd:string"
+    },
+    "private_key": {
+      "@id": "idrive:private_key",
+      "@type": "xsd:string"
+    },
+    "file_index": {
+      "@id": "idrive:file_index",
+      "@type": "xsd:string"
+    },
+    "passphrase": {
+      "@id": "idrive:passphrase",
+      "@type": "xsd:string"
+    },
+    "PostApiResellerV1StorageCnameAddResponse": "idrive:PostApiResellerV1StorageCnameAddResponse",
+    "cname_added": {
+      "@id": "idrive:cname_added",
+      "@type": "xsd:boolean"
+    },
+    "PostApiResellerV1StorageCnameUpdateResponse": "idrive:PostApiResellerV1StorageCnameUpdateResponse",
+    "cname_removed": {
+      "@id": "idrive:cname_removed",
+      "@type": "xsd:boolean"
+    },
+    "GetApiResellerV1UsersResponse": "idrive:GetApiResellerV1UsersResponse",
+    "PutApiSubusersV1CreateAccountResponse": "idrive:PutApiSubusersV1CreateAccountResponse",
+    "success": {
+      "@id": "idrive:success",
+      "@type": "xsd:boolean"
+    },
+    "PostApiSubusersV1DisableResponse": "idrive:PostApiSubusersV1DisableResponse",
+    "PostApiSubusersV1EnableResponse": "idrive:PostApiSubusersV1EnableResponse",
+    "PutApiSubusersV1InviteResponse": "idrive:PutApiSubusersV1InviteResponse",
+    "PostApiSubusersV1InviteCancelResponse": "idrive:PostApiSubusersV1InviteCancelResponse",
+    "PostApiSubusersV1ListResponse": "idrive:PostApiSubusersV1ListResponse",
+    "PostApiSubusersV1RemoveResponse": "idrive:PostApiSubusersV1RemoveResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "IDrive API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects IDrive's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-13) from openapi/_ae-authored/idrive-openapi-generated.yml.",
+  "dcterms:created": "2026-10-13",
+  "dcterms:source": [
+    "openapi/_ae-authored/idrive-openapi-generated.yml"
+  ]
+}

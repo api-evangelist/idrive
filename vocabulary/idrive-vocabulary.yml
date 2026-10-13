@@ -1,0 +1,150 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/idrive-openapi-generated.yml
+vocabulary:
+  name: IDrive Domain Vocabulary
+  description: 'Terms declared by IDrive''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-13'
+  terms:
+  - term: PostApiResellerV1CreateAccessKeyResponse
+    definition: 'Object declared by the contract with fields: removed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1CreateAccessKeyResponse
+  - term: PutApiResellerV1CreateUserResponse
+    definition: 'Object declared by the contract with fields: user_updated.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PutApiResellerV1CreateUserResponse
+  - term: PostApiResellerV1DisableUserResponse
+    definition: 'Object declared by the contract with fields: user_enabled.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1DisableUserResponse
+  - term: PostApiResellerV1EditUserResponse
+    definition: 'Object declared by the contract with fields: user_disabled.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1EditUserResponse
+  - term: PostApiResellerV1EnableUserResponse
+    definition: 'Object declared by the contract with fields: user_removed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1EnableUserResponse
+  - term: PostApiResellerV1EnableUserRegionResponse
+    definition: 'Object declared by the contract with fields: removed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1EnableUserRegionResponse
+  - term: PutApiResellerV1InviteResponse
+    definition: 'Object declared by the contract with fields: user_created.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PutApiResellerV1InviteResponse
+  - term: PostApiResellerV1ListAccessKeysResponse
+    definition: 'Object declared by the contract with fields: removed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1ListAccessKeysResponse
+  - term: PostApiResellerV1ListUserRegionsRequest
+    definition: 'Object declared by the contract with fields: email.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1ListUserRegionsRequest
+  - term: PostApiResellerV1ListUserRegionsResponse
+    definition: 'Object declared by the contract with fields: removed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1ListUserRegionsResponse
+  - term: GetApiResellerV1RegionsResponse
+    definition: 'Object declared by the contract with fields: removed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/GetApiResellerV1RegionsResponse
+  - term: PostApiResellerV1RemoveAccessKeyResponse
+    definition: 'Object declared by the contract with fields: bucket_name, file_count, bucket_size.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1RemoveAccessKeyResponse
+  - term: PostApiResellerV1RemoveUserResponse
+    definition: 'Object declared by the contract with fields: user_removed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1RemoveUserResponse
+  - term: PostApiResellerV1RemoveUserRegionResponse
+    definition: 'Object declared by the contract with fields: cors_updated.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1RemoveUserRegionResponse
+  - term: PostApiResellerV1StorageBucketStatsResponse
+    definition: 'Object declared by the contract with fields: bucket_name, file_count, bucket_size.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1StorageBucketStatsResponse
+  - term: PostApiResellerV1StorageCnameResponse
+    definition: 'Object declared by the contract with fields: cname_updated.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1StorageCnameResponse
+  - term: PostApiResellerV1StorageCnameAddRequest
+    definition: 'Object declared by the contract with fields: email, storage_dn, cname, public_key, private_key, file_index, passphrase.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1StorageCnameAddRequest
+  - term: PostApiResellerV1StorageCnameAddResponse
+    definition: 'Object declared by the contract with fields: cname_added.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1StorageCnameAddResponse
+  - term: PostApiResellerV1StorageCnameUpdateResponse
+    definition: 'Object declared by the contract with fields: cname_removed.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiResellerV1StorageCnameUpdateResponse
+  - term: GetApiResellerV1UsersResponse
+    definition: 'Object declared by the contract with fields: user_created.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/GetApiResellerV1UsersResponse
+  - term: PutApiSubusersV1CreateAccountResponse
+    definition: 'Object declared by the contract with fields: success.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PutApiSubusersV1CreateAccountResponse
+  - term: PostApiSubusersV1DisableResponse
+    definition: 'Object declared by the contract with fields: success.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiSubusersV1DisableResponse
+  - term: PostApiSubusersV1EnableResponse
+    definition: 'Object declared by the contract with fields: success.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiSubusersV1EnableResponse
+  - term: PutApiSubusersV1InviteResponse
+    definition: 'Object declared by the contract with fields: success.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PutApiSubusersV1InviteResponse
+  - term: PostApiSubusersV1InviteCancelResponse
+    definition: 'Object declared by the contract with fields: success.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiSubusersV1InviteCancelResponse
+  - term: PostApiSubusersV1ListResponse
+    definition: 'Object declared by the contract with fields: success.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiSubusersV1ListResponse
+  - term: PostApiSubusersV1RemoveResponse
+    definition: 'Object declared by the contract with fields: success.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/idrive-openapi-generated.yml#/components/schemas/PostApiSubusersV1RemoveResponse
+  - term: Api
+    definition: 'Resource group in the contract; its operation POST /api/reseller/v1/create_access_key: POST /api/reseller/v1/create_access_key'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/idrive-openapi-generated.yml

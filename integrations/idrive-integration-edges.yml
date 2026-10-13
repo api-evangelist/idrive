@@ -1,0 +1,16 @@
+generated: '2026-10-13'
+method: none
+source:
+- https://zapier.com/apps/idrive/integrations
+- https://n8n.io/integrations/idrive/
+- https://composio.dev/toolkits/idrive
+- https://monid.ai/tools/idrive
+checked:
+- https://composio.dev/toolkits/idrive
+- https://monid.ai/tools/idrive
+- https://n8n.io/integrations/idrive/
+- https://zapier.com/apps/idrive/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

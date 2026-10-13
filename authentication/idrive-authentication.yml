@@ -1,0 +1,22 @@
+generated: '2026-10-13'
+method: searched
+source: https://www.idrive.com/s3-storage-e2/reseller-api
+schemes:
+- name: token
+  type: apiKey
+  in: header
+  header: token
+  applies_to: IDrive e2 Reseller API
+  description: API key generated from the profile section of the IDrive e2 account, sent in the token header on every call.
+- name: IDrive e2 OAuth
+  type: oauth2
+  applies_to: IDrive e2 MCP (hosted)
+  flows:
+  - authorization_code
+  pkce: S256
+  dynamic_client_registration: https://api.idrivee2.com/oauth/register
+  evidence: https://api.idrivee2.com/oauth/.well-known/oauth-authorization-server
+- name: S3 access keys
+  type: aws-sigv4
+  applies_to: S3-compatible storage endpoints
+  description: Access keys created in the e2 console or via the Reseller API create_access_key operation.

@@ -1,0 +1,18 @@
+generated: '2026-10-13'
+method: probed
+source: https://api.idrivee2.com/oauth/.well-known/oauth-authorization-server
+docs: https://www.idrive.com/s3-storage-e2/faq-mcp
+description: OAuth scopes advertised by the IDrive e2 authorization server (used by the hosted IDrive e2 MCP).
+schemes:
+- name: IDrive e2 OAuth
+  type: oauth2
+  grant_types:
+  - authorization_code
+  - refresh_token
+  authorizationUrl: https://api.idrivee2.com/oauth/authorize
+  tokenUrl: https://api.idrivee2.com/oauth/token
+  pkce: S256
+scopes:
+- name: e2:regions:read
+- name: e2:buckets:read
+- name: e2:buckets:write

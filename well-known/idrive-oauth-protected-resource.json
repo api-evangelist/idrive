@@ -1,0 +1,1 @@
+{"resource":"https://mcp.idrivee2.com/s3","authorization_servers":["https://api.idrivee2.com/oauth"],"scopes_supported":["e2:regions:read","e2:buckets:read","e2:buckets:write"]}
