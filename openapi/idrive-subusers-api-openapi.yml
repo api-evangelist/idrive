@@ -1,0 +1,225 @@
+openapi: 3.2.0
+info:
+  title: IDrive e2 Reseller Subusers API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 38 operation(s) read from 4 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; IDrive has published no machine-readable contract that the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 38
+    documentation: 0
+    pages-with-code: 4
+    pages-read: 4
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://www.idrive.com/s3-storage-e2/reseller-api
+  - https://www.idrive.com/de/s3-storage-e2/reseller-api
+  - https://www.idrive.com/ko/s3-storage-e2/reseller-api
+  - https://www.idrive.com/s3-storage-e2/s3-compatible-api
+  x-ae-note: 5 operations taken from S3-compatible-API examples (bucket/object sample paths, not api.idrivee2.com) were removed by API Evangelist on 2026-10-13; S3 operations are the AWS S3 API surface at regional e2 endpoints.
+servers:
+- url: https://api.idrivee2.com
+security:
+- apiKey: []
+tags:
+- name: Subusers
+paths:
+  /api/subusers/v1/create_account:
+    put:
+      operationId: put_api_subusers_v1_create_account
+      tags:
+      - Subusers
+      summary: PUT /api/subusers/v1/create_account
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApiSubusersV1CreateAccountResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request PUT 'https://api.idrivee2.com/api/subusers/v1/create_account' \n --data '{ \n      \"subuser_email\" : \"abc1@example.com\", \n      \"storage_access\" : [ \n       { \n          \"storage_dn\" : \"h4l1.ch.idrivee2-29.com\", \n          \"buckets\" : [ \n          \"bucket1\", \n          \"bucket2\" \n         ] \n       }, \n       { \n          \"storage_dn\" : \"r8l2.ie.idrivee2-44.com\", \n          \"buckets\" "
+  /api/subusers/v1/disable:
+    post:
+      operationId: post_api_subusers_v1_disable
+      tags:
+      - Subusers
+      summary: POST /api/subusers/v1/disable
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1DisableResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/disable' \n --data '{ \n    \"subuser_email\" : \"abc1@example.com\", \n    \"admin_email\" : \"admin1@example.com\", \n    \"email_notification\" : true \n }' --header 'token: <your api key>' \n Enable subuser \n POST \n https://api.idrivee2.com/api/subusers/v1/enable Click to copy Link copied \n This API re-enables disabled subuser accounts. Subusers ca"
+  /api/subusers/v1/enable:
+    post:
+      operationId: post_api_subusers_v1_enable
+      tags:
+      - Subusers
+      summary: POST /api/subusers/v1/enable
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1EnableResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/enable' \n --data '{ \n      \"subuser_email\" : \"abc1@example.com\", \n      \"admin_email\" : \"admin1@example.com\", \n      \"email_notification\" : true \n }' --header 'token: <your api key>' \n Remove subuser \n POST \n https://api.idrivee2.com/api/subusers/v1/remove Click to copy Link copied \n This API will permanently delete users from IDrive ® "
+  /api/subusers/v1/invite:
+    put:
+      operationId: put_api_subusers_v1_invite
+      tags:
+      - Subusers
+      summary: PUT /api/subusers/v1/invite
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApiSubusersV1InviteResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request PUT 'https://api.idrivee2.com/api/subusers/v1/invite' \n --data '{ \n   \"subuser_email\": \"abc1@example.com\", \n   \"storage_access\": [ \n     { \n       \"storage_dn\": \"h4l1.ch.idrivee2-29.com\", \n       \"buckets\": [ \n         \"bucket1\", \n         \"bucket2\" \n       ] \n     }, \n     { \n       \"storage_dn\": \"r8l2.ie.idrivee2-44.com\", \n       \"buckets\": [ \n         \"bucket3\", \n         \"bucket"
+  /api/subusers/v1/invite/cancel:
+    post:
+      operationId: post_api_subusers_v1_invite_cancel
+      tags:
+      - Subusers
+      summary: POST /api/subusers/v1/invite/cancel
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1InviteCancelResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/invite/cancel' \n --data '{ \n     \"subuser_email\": \"abc1@example.com\", \n     \"admin_email\": \"admin1@example.com\" \n }' --header 'token: <your api key>' \n Update Subuser \n POST \n https://api.idrivee2.com/api/subusers/v1/update Click to copy Link copied \n This API updates subusers access, permissions, SSO, and session control. The API can b"
+  /api/subusers/v1/list:
+    post:
+      operationId: post_api_subusers_v1_list
+      tags:
+      - Subusers
+      summary: POST /api/subusers/v1/list
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1ListResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/list' --header 'token: <your api key>' \n --> "
+  /api/subusers/v1/remove:
+    post:
+      operationId: post_api_subusers_v1_remove
+      tags:
+      - Subusers
+      summary: POST /api/subusers/v1/remove
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSubusersV1RemoveResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/remove' \n --data '{ \n     \"subuser_email\": \"abc1@example.com\", \n     \"admin_email\": \"admin1@example.com\", \n     \"email_notification\": true \n }' --header 'token: <your api key>' \n Cancel Invite \n POST \n https://api.idrivee2.com/api/subusers/v1/invite/cancel Click to copy Link copied \n This API will cancel the invitation sent to the subus"
+  /api/subusers/v1/update:
+    post:
+      operationId: post_api_subusers_v1_update
+      tags:
+      - Subusers
+      summary: POST /api/subusers/v1/update
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/update' \n --data '{ \n     \"subuser_email\": \"abc1@example.com\", \n     \"storage_access\": [ \n         { \n             \"storage_dn\": \"h4l1.ch.idrivee2-29.com\", \n             \"buckets\": [ \n               \"bucket1\", \n               \"bucket2\" \n              ] \n         }, \n         { \n             \"storage_dn\": \"r8l2.ie.idrivee2-44.com\", \n    "
+  /api/subusers/v1/user_activity_history:
+    post:
+      operationId: post_api_subusers_v1_user_activity_history
+      tags:
+      - Subusers
+      summary: POST /api/subusers/v1/user_activity_history
+      x-source: https://www.idrive.com/s3-storage-e2/reseller-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST 'https://api.idrivee2.com/api/subusers/v1/user_activity_history' \n --data '{ \n     \"subuser_email\": \"abc1@example.com\", \n     \"admin_email\" : \"admin1@example.com\", \n     \"start_date\" : \"2025-04-05\", \n     \"end_date\" : \"2025-05-28\", \n     \"page_no\" : 1 \n }' --header 'token: <your api key>' \n E2-logo \n IDrive ® \n Pricing \n Support \n Contact Sales \n Blog \n Get Started \n Sign up \n "
+components:
+  schemas:
+    PostApiSubusersV1InviteCancelResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiSubusersV1EnableResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PutApiSubusersV1InviteResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiSubusersV1DisableResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiSubusersV1RemoveResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PostApiSubusersV1ListResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    PutApiSubusersV1CreateAccountResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: token
