@@ -81,3 +81,77 @@ plans:
   features:
   - Reseller API access
   limits: []
+x-canonical:
+  generated: '2026-10-18'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - negotiated
+  - subscription
+  units: []
+  plans:
+  - name: 1 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: 2 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: 5 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: 10 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: 20 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: 50 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: 100 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: 200 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: 500 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: 1000 TB yearly
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Veeam/MSP/Reseller plans
+    access: other
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
