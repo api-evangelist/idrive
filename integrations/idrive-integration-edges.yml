@@ -1,5 +1,5 @@
 generated: '2026-10-13'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/idrive/integrations
 - https://n8n.io/integrations/idrive/
@@ -10,7 +10,45 @@ checked:
 - https://monid.ai/tools/idrive
 - https://n8n.io/integrations/idrive/
 - https://zapier.com/apps/idrive/integrations
+- okta/integrations/okta-integration-edges.yml
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Amazon Web Services
+  partner: amazon-web-services
+  partner_match: shape-anchor
+  channel: provider-built
+  relationship: compatible
+  direction: provider-built
+  shape: aws-s3
+  type: contract
+  degree: declared-unqualified
+  evidence: https://github.com/api-evangelist/idrive/blob/main/openapi/idrive-reseller-api-openapi.yml#L21
+  evidence_kind: own-contract
+  quote: '- https://www.idrive.com/s3-storage-e2/s3-compatible-api'
+  detected_by: sweep-shape-compat.py
+  first_seen: '2026-10-19'
+- partner_name: Okta (own)
+  partner: okta
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.okta.com/integrations/idrive/
+  mirror_of: okta/integrations/okta-integration-edges.yml
+  apps:
+  - IDrive
+  - IDrive360
+  listing_count: 2
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Single Sign-On
+  badges:
+  - OKTA_VERIFIED
+  features:
+  - SAML
+  - SWA
 templates: []
