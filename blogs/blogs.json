@@ -1,0 +1,14 @@
+{
+  "repo": "idrive",
+  "feeds": [
+    {
+      "source": "https://blog.idrive.com/",
+      "feed_url": "https://blog.idrive.com/feed/",
+      "title": "",
+      "saved": 1,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 1,
+  "fetched": "2026-10-17T14:53:57Z"
+}
