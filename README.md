@@ -64,5 +64,139 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-IDrive is a company surfaced via the API Evangelist harvest backlog (source: market-gap:object-storage) and added to the network as a stub for full-pipeline profiling.
-- https://www.idrive.com
+IDrive Inc. provides cloud backup and IDrive e2, an S3-compatible object storage service. For developers it publishes the IDrive e2 Reseller API (a REST/JSON API at api.idrivee2.com for managing users, regions, access keys, CNAME whitelabeling and subusers, authenticated with an API key sent in a token header), the S3-compatible storage endpoints themselves, and IDrive e2 MCP, an OAuth-protected hosted Model Context Protocol server at mcp.idrivee2.com/s3 (with a self-hosted option) exposing 65 bucket and object tools to AI clients.
+
+**Areas:** Company · Object Storage · S3 Compatible · Cloud Storage · Backup · Reseller · MCP
+
+## IDrive on APIs.io
+
+Everything profiled for IDrive is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/idrive/](https://apis.io/providers/idrive/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [IDrive Reseller API](https://apis.io/apis/idrive/idrive-reseller-api/) — The Reseller API from IDrive — 24 operation(s) for reseller.
+- [IDrive Subusers API](https://apis.io/apis/idrive/idrive-subusers-api/) — The Subusers API from IDrive — 9 operation(s) for subusers.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [idrive-e2](https://apis.io/servers/idrive/idrive-e2/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [PostApiResellerV1EditUserResponse](https://apis.io/schemas/idrive/idrive-post-api-reseller-v1-edit-user-response/)
+- [PostApiResellerV1RemoveAccessKeyResponse](https://apis.io/schemas/idrive/idrive-post-api-reseller-v1-remove-access-key-response/)
+- [PostApiResellerV1StorageBucketStatsResponse](https://apis.io/schemas/idrive/idrive-post-api-reseller-v1-storage-bucket-stats-response/)
+- [PostApiResellerV1StorageCnameAddRequest](https://apis.io/schemas/idrive/idrive-post-api-reseller-v1-storage-cname-add-request/)
+- [PostApiResellerV1StorageCnameResponse](https://apis.io/schemas/idrive/idrive-post-api-reseller-v1-storage-cname-response/)
+- [PostApiResellerV1StorageCnameUpdateResponse](https://apis.io/schemas/idrive/idrive-post-api-reseller-v1-storage-cname-update-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Idrive Context](https://apis.io/jsonld/idrive/idrive-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [IDrive API Rules](https://apis.io/rules/idrive/idrive-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Idrive Authentication](https://apis.io/security/idrive/idrive-authentication/)
+- [Idrive Domain Security](https://apis.io/security/idrive/idrive-domain-security/)
+- [Idrive Trust Center](https://apis.io/security/idrive/idrive-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Idrive Scopes](https://apis.io/scopes/idrive/idrive-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Idrive Plans](https://apis.io/plans/idrive/idrive-plans/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.idrive.com)
+- [Documentation](https://www.idrive.com/s3-storage-e2/developer-guide)
+- [API reference](https://www.idrive.com/s3-storage-e2/reseller-api)
+- [Pricing](https://www.idrive.com/s3-storage-e2/pricing)
+- [Sign up](https://console.idrivee2.com/signup)
+- [Support](https://www.idrive.com/s3-storage-e2/support)
+- [Blog](https://blog.idrive.com/)
+- [Security](https://www.idrive.com/endpoint-backup/security)
+- [Compliance](https://security.idrive.com/)
+- [Terms of service](https://www.idrive.com/s3-storage-e2/terms)
+- [Privacy policy](https://www.idrive.com/privacy)
+
+## API Evangelist rating
+
+**Kin Score 48.0** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 70.0 |
+| Contract quality | 26.5 |
+| Contract governance | 22.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 92.1 |
+
+**Agent readiness 43.1** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 39.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/idrive/](https://apis.io/providers/idrive/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for IDrive: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/idrive/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
